@@ -7,8 +7,8 @@ for REPO in ${REPOS}; do
 			&& hg incoming \
 			&& hg pull \
 			&& hg update \
-	)
-	( cd ${REPO}.git \
+	) \
+	&& ( cd ${REPO}.git \
 			&& ../fast-export.git/hg-fast-export.sh \
 			&& git-push git@github.com:rsbx/${REPO}.git
 	)
