@@ -10,6 +10,6 @@ for REPO in ${REPOS}; do
 	) \
 	&& ( cd ${REPO}.git \
 			&& ../fast-export.git/hg-fast-export.sh \
-			&& git-push git@github.com:rsbx/${REPO}.git
+			&& git-push --all git@github.com:rsbx/${REPO}.git
 	)
 done
